@@ -1,3 +1,10 @@
+## <small>0.0.3 (2024-01-05)</small>
+
+* 0.0.3 ([8952e00](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/8952e00))
+* chore: :memo: Add npm run changelog ([53b7328](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/53b7328))
+
+
+
 ## <small>0.0.2 (2024-01-05)</small>
 
 * 0.0.2 ([e719ae4](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/e719ae4))

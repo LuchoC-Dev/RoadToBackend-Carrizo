@@ -1,0 +1,23 @@
+{
+  "name": "roadtobackend-carrizo",
+  "version": "0.0.0",
+  "description": "Welcome to my proyect to conclude the career as a Full-Stack web developer. For this, I will implements a On-line shop using my skills I´ve adquired in this field",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.5",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "mongoose": "^8.0.3",
+    "mongoose-paginate-v2": "^1.8.0",
+    "nodemon": "^3.0.2",
+    "socket.io": "^4.7.3"
+  }
+}

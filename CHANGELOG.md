@@ -1,3 +1,10 @@
+## <small>0.0.5 (2024-01-06)</small>
+
+* 0.0.5 ([d149604](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/d149604))
+* fix: :closed_lock_with_key: Database security changes ([1a65801](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/1a65801))
+
+
+
 ## <small>0.0.4 (2024-01-05)</small>
 
 * 0.0.4 ([2d07d1c](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/2d07d1c))

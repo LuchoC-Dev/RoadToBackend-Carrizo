@@ -5,14 +5,37 @@ import express from 'express';
 import { PORT, APP_URL } from './utils/env.js';
 import Database from './class/Database.js';
 
+class MyServer {
+  constructor() {
+    this.PORT = PORT;
+    this.app = express();
+    this.appListen = this.app.listen(this.PORT, this.appListenCallback);
+  }
+
+  appListenCallback() {
+    console.log(`Sevidor iniciado en: ${APP_URL}`);
+  }
+
+  async init() {
+    await this.initDB();
+  }
+
+  async initDB() {
+    this.db = await new Database(this.appListen).init();
+  }
+}
+
+const myServer = new MyServer().init();
+
+/*
 const app = express();
 const httpServer = app.listen(PORT, () => {
   console.log(`Sevidor iniciado en: ${APP_URL}`);
 });
 
 const initDB = async (httpServer) => {
-  const db = new Database(httpServer);
-  return await db.init();
+  return new Database(httpServer).init();
 };
 
 const db = initDB(httpServer);
+*/

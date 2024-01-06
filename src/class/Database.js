@@ -2,9 +2,7 @@ import mongoose from 'mongoose';
 import { DB_URL } from '../utils/env.js';
 
 class Database {
-  constructor(http) {
-    this.http = http;
-  }
+  constructor() {}
   async init() {
     try {
       await mongoose.connect(DB_URL);

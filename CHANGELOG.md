@@ -1,3 +1,17 @@
+## 0.1.0 (2024-01-06)
+
+* 0.1.0 ([6fa2eab](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/6fa2eab))
+* feat: :sparkles: Implements api socket ([46bc9b9](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/46bc9b9))
+
+
+
+## <small>0.0.11 (2024-01-06)</small>
+
+* 0.0.11 ([1212f25](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/1212f25))
+* fix: :bug: db_url declaration move to server ([0618a97](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/0618a97))
+
+
+
 ## <small>0.0.10 (2024-01-06)</small>
 
 * 0.0.10 ([5debfb9](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/5debfb9))

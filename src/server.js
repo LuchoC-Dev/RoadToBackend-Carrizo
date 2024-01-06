@@ -3,6 +3,9 @@ import express from 'express';
 
 // Utils imports
 import { PORT, APP_URL } from './utils/env.js';
+import { __dirProyecto } from './utils/dirnames.js';
+
+// Class imports
 import Database from './class/Database.js';
 
 class MyServer {

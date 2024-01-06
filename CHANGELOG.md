@@ -1,3 +1,17 @@
+## <small>0.0.7 (2024-01-06)</small>
+
+* 0.0.7 ([941a30d](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/941a30d))
+* feat: :sparkles: Add security middlewares to server ([713766d](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/713766d))
+
+
+
+## <small>0.0.6 (2024-01-06)</small>
+
+* 0.0.6 ([4f7194c](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/4f7194c))
+* build: :hammer: transform server system to POO ([0c7de0d](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/0c7de0d))
+
+
+
 ## <small>0.0.5 (2024-01-06)</small>
 
 * 0.0.5 ([d149604](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/d149604))

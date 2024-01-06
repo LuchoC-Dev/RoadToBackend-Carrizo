@@ -1,6 +1,6 @@
 {
   "name": "roadtobackend-carrizo",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Welcome to my proyect to conclude the career as a Full-Stack web developer. For this, I will implements a On-line shop using my skills I´ve adquired in this field",
   "main": "index.js",
   "type": "module",

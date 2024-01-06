@@ -1,3 +1,25 @@
+## <small>0.0.10 (2024-01-06)</small>
+
+* 0.0.10 ([5debfb9](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/5debfb9))
+* feat: :sparkles: Implements sochet.io ([bb8fa56](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/bb8fa56))
+* fix: :bug: add imports ([f3d3a67](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/f3d3a67))
+
+
+
+## <small>0.0.9 (2024-01-06)</small>
+
+* 0.0.9 ([4298d66](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/4298d66))
+* feat: :sparkles: Implements handlebars ([cca10ee](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/cca10ee))
+
+
+
+## <small>0.0.8 (2024-01-06)</small>
+
+* 0.0.8 ([6e2af62](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/6e2af62))
+* fix: :wrench: Implements dirnames ([82a8195](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/82a8195))
+
+
+
 ## <small>0.0.7 (2024-01-06)</small>
 
 * 0.0.7 ([941a30d](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/941a30d))

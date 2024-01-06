@@ -5,7 +5,7 @@ import Handlebars from 'handlebars';
 import { allowInsecurePrototypeAccess } from '@handlebars/allow-prototype-access';
 
 // Utils imports
-import { PORT, APP_URL } from './utils/env.js';
+import { PORT, APP_URL, DB_URL } from './utils/env.js';
 import { __dirProyecto, __dirSrc } from './utils/dirnames.js';
 
 // Class imports
@@ -63,7 +63,7 @@ class MyServer {
   }
 
   async databaseInit() {
-    this.db = await new Database(this.appListen).init();
+    this.db = await new Database(DB_URL).init();
   }
 
   socketsInit() {

@@ -1,11 +1,12 @@
 import mongoose from 'mongoose';
-import { DB_URL } from '../utils/env.js';
 
 class Database {
-  constructor() {}
+  constructor(url) {
+    this.url = url;
+  }
   async init() {
     try {
-      await mongoose.connect(DB_URL);
+      await mongoose.connect(this.url);
 
       console.log('Conexion exitosa con DB');
     } catch (error) {

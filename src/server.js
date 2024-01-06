@@ -6,7 +6,7 @@ import { allowInsecurePrototypeAccess } from '@handlebars/allow-prototype-access
 
 // Utils imports
 import { PORT, APP_URL } from './utils/env.js';
-import { __dirProyecto } from './utils/dirnames.js';
+import { __dirProyecto, __dirSrc } from './utils/dirnames.js';
 
 // Class imports
 import Database from './class/Database.js';

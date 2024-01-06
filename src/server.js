@@ -10,7 +10,8 @@ import { __dirProyecto, __dirSrc } from './utils/dirnames.js';
 
 // Class imports
 import Database from './class/Database.js';
-import SocketIo from './class/SocketIo.js';
+import apiRouter from './routes/api/api.routes.js';
+import { apiSocketInit } from './sockets/api.socket.js';
 
 class MyServer {
   constructor() {
@@ -68,28 +69,17 @@ class MyServer {
 
   socketsInit() {
     this.sockets = [];
-    this.apiSocketInit('/path');
+    this.apiSocketInit('/api');
   }
 
-  apiSocketInit(path) {
-    const apiSocket = new SocketIo(path, this.appListen).init();
-    this.sockets.push(apiSocket);
+  apiSocketInit() {
+    apiSocketInit(this.appListen);
   }
 
-  routesInit() {}
+  routesInit() {
+    this.app.use('/', apiRouter);
+  }
 }
 
-const myServer = new MyServer().init();
-
-/*
-const app = express();
-const httpServer = app.listen(PORT, () => {
-  console.log(`Sevidor iniciado en: ${APP_URL}`);
-});
-
-const initDB = async (httpServer) => {
-  return new Database(httpServer).init();
-};
-
-const db = initDB(httpServer);
-*/
+const myServer = new MyServer();
+myServer.init();

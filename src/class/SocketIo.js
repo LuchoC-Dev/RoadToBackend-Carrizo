@@ -8,15 +8,14 @@ class SocketIo {
 
   init() {
     this.io = new Server(this.httpServer).of(this.path);
-    this.ioConnect();
   }
 
-  ioConnect() {
-    this.io.on('connection', (socket) => this.connectionCallback(socket));
+  newOn(eventName, eventcallback) {
+    this.io.on(eventName, eventcallback);
   }
 
-  async connectionCallback(socket) {
-    console.log(`Nuevo cliente conectado: ${socket.id}`);
+  newEmit(socket, eventName, message) {
+    socket.emit(eventName, message);
   }
 }
 

@@ -17,7 +17,22 @@ class MyServer {
   }
 
   async init() {
+    this.middlewaresInit();
     await this.initDB();
+  }
+
+  middlewaresInit() {
+    this.middlewaresSecurityInit();
+    this.publicLinkInit();
+  }
+
+  middlewaresSecurityInit() {
+    this.app.use(express.json());
+    this.app.use(express.urlencoded({ extended: true }));
+  }
+
+  publicLinkInit() {
+    this.app.use(express.static(`${__dirProyecto}/public`));
   }
 
   async initDB() {

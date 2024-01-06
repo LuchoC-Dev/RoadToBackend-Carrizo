@@ -10,6 +10,7 @@ import { __dirProyecto, __dirSrc } from './utils/dirnames.js';
 
 // Class imports
 import Database from './class/Database.js';
+import SocketIo from './class/SocketIo.js';
 
 class MyServer {
   constructor() {
@@ -25,7 +26,9 @@ class MyServer {
   async init() {
     this.middlewaresInit();
     this.handlebarsInit();
-    await this.initDB();
+    await this.databaseInit();
+    this.socketsInit();
+    this.routesInit();
   }
 
   middlewaresInit() {
@@ -36,6 +39,10 @@ class MyServer {
   middlewaresSecurityInit() {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
+  }
+
+  publicLinkInit() {
+    this.app.use(express.static(`${__dirProyecto}/public`));
   }
 
   handlebarsInit() {
@@ -55,13 +62,21 @@ class MyServer {
     this.app.set('views', `${__dirSrc}/views`);
   }
 
-  publicLinkInit() {
-    this.app.use(express.static(`${__dirProyecto}/public`));
-  }
-
-  async initDB() {
+  async databaseInit() {
     this.db = await new Database(this.appListen).init();
   }
+
+  socketsInit() {
+    this.sockets = [];
+    this.apiSocketInit('/path');
+  }
+
+  apiSocketInit(path) {
+    const apiSocket = new SocketIo(path, this.appListen).init();
+    this.sockets.push(apiSocket);
+  }
+
+  routesInit() {}
 }
 
 const myServer = new MyServer().init();

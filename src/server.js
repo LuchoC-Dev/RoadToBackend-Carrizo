@@ -1,5 +1,8 @@
 //  Basics imports
 import express from 'express';
+import handlebars from 'express-handlebars';
+import Handlebars from 'handlebars';
+import { allowInsecurePrototypeAccess } from '@handlebars/allow-prototype-access';
 
 // Utils imports
 import { PORT, APP_URL } from './utils/env.js';
@@ -21,6 +24,7 @@ class MyServer {
 
   async init() {
     this.middlewaresInit();
+    this.handlebarsInit();
     await this.initDB();
   }
 
@@ -32,6 +36,23 @@ class MyServer {
   middlewaresSecurityInit() {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
+  }
+
+  handlebarsInit() {
+    this.handlebarsEngineInit();
+  }
+
+  handlebarsEngineInit() {
+    this.app.engine(
+      'hbs',
+      handlebars.engine({
+        extname: 'hbs',
+        defaultLayout: 'main',
+        handlebars: allowInsecurePrototypeAccess(Handlebars),
+      }),
+    );
+    this.app.set('view engine', 'hbs');
+    this.app.set('views', `${__dirSrc}/views`);
   }
 
   publicLinkInit() {

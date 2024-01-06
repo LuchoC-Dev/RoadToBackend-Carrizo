@@ -1,3 +1,10 @@
+## <small>0.0.4 (2024-01-05)</small>
+
+* 0.0.4 ([2d07d1c](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/2d07d1c))
+* docs: :memo: add CHANGELOG to .gitignore ([3ee0f9b](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/3ee0f9b))
+
+
+
 ## <small>0.0.3 (2024-01-05)</small>
 
 * 0.0.3 ([8952e00](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/8952e00))

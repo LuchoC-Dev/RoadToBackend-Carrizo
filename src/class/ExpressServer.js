@@ -1,8 +1,8 @@
 import express from 'express';
 
 class ExpressServer {
-  constructor(PORT, listenCallback) {
-    this.port = PORT;
+  constructor({ port, listenCallback }) {
+    this.port = port;
     this.expressInit(listenCallback);
   }
 

@@ -7,10 +7,9 @@ class Database {
   async init() {
     try {
       await mongoose.connect(this.url);
-
-      console.log('Conexion exitosa con DB');
+      console.log('Successful connection with Database');
     } catch (error) {
-      console.error(error);
+      console.error(`Error connecting to the Database\n${error}`);
     }
   }
 }

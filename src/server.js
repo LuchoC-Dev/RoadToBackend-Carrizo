@@ -7,9 +7,20 @@ import { __proyectDir, __srcDir } from './utils/dirnames.js';
 // Class imports
 import BigServer from './class/BigServer.js';
 
+const publicDir = `${__proyectDir}/public`;
+const viewsDir = `${__srcDir}/views`;
 const appListenCallback = () => {
   console.log(`Sevidor iniciado en: ${APP_URL}`);
 };
-
-const server = new BigServer(PORT, appListenCallback, `${__proyectDir}/public`, `${__srcDir}/views`, DB_URL);
-server.init();
+try {
+  const server = new BigServer({
+    port: PORT,
+    publicPath: publicDir,
+    hbsViewsPath: viewsDir,
+    dbUrl: DB_URL,
+    listenCallback: appListenCallback,
+  });
+  server.init();
+} catch (error) {
+  console.error(error);
+}

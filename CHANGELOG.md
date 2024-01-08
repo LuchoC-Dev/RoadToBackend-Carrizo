@@ -1,3 +1,10 @@
+## 0.2.0 (2024-01-08)
+
+* 0.2.0 ([b6e922d](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/b6e922d))
+* build: :hammer: POO to server ([0c0f31b](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/0c0f31b))
+
+
+
 ## <small>0.1.1 (2024-01-06)</small>
 
 * 0.1.1 ([921a0a0](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/921a0a0))

@@ -2,27 +2,39 @@
 import express from 'express';
 import ExpressServer from './ExpressServer.js';
 import { useHandlebars } from './Implements.js';
-import SocketApi from './SocketApi.js';
+import SocketApi from '../sockets/SocketApi.js';
 import apiRouter from '../routes/api/api.routes.js';
 import Database from './Database.js';
 
 class BigServer extends ExpressServer {
-  constructor(PORT, listenCallback, publicPath, hbsViewsPath, DB_URL) {
-    super(PORT, listenCallback);
+  constructor({ port, publicPath, hbsViewsPath, dbUrl, listenCallback }) {
+    super({ port, listenCallback });
     this.publicPath = publicPath;
     this.hbsViewsPath = hbsViewsPath;
-    this.db_url = DB_URL;
+    this.dbUrl = dbUrl;
   }
   async init() {
-    this.appUse(express.static(this.publicPath));
-    useHandlebars(this.app, this.hbsViewsPath);
+    this._setPublic();
+    this._handlebarsInit();
+    this._routesInit();
     await this._dbInit();
     this._socketInit();
-    this._routesInit();
+  }
+
+  _setPublic() {
+    this.appUse(express.static(this.publicPath));
+  }
+
+  _handlebarsInit() {
+    useHandlebars(this.app, this.hbsViewsPath);
+  }
+
+  _routesInit() {
+    this.addRoute(apiRouter);
   }
 
   async _dbInit() {
-    this.db = new Database(this.db_url);
+    this.db = new Database(this.dbUrl);
     await this.db.init();
   }
 
@@ -32,13 +44,20 @@ class BigServer extends ExpressServer {
   }
 
   _socketApiInit(path) {
-    const socket = new SocketApi(path, this.appListen);
-    socket.run();
-    this.sockets['api'] = socket;
-  }
-
-  _routesInit() {
-    this.addRoute(apiRouter);
+    try {
+      const socketName = 'api';
+      if (this.sockets[socketName]) {
+        throw new Error(
+          `Error initializing the socket with the name "${socketName}". A socket with that name already exists.`,
+        );
+      }
+      const socket = new SocketApi(path, this.appListen);
+      socket.run();
+      this.sockets[socketName] = socket;
+      console.log(`Successful initialization with ${socketName} socket`);
+    } catch (error) {
+      console.error(error);
+    }
   }
 }
 

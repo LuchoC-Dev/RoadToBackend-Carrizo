@@ -2,8 +2,8 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirUtilis = path.dirname(__filename);
-const __dirSrc = path.join(__dirUtilis, '..');
-const __dirProyecto = path.join(__dirSrc, '..');
+const __utilsDir = path.dirname(__filename);
+const __srcDir = path.join(__utilsDir, '..');
+const __proyectDir = path.join(__srcDir, '..');
 
-export { __dirSrc, __dirProyecto };
+export { __srcDir, __proyectDir };

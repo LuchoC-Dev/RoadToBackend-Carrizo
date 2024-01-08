@@ -1,9 +1,9 @@
-import SocketIo from '../class/SocketIo.js';
+import Socket from '../class/Socket.js';
 
 let apiSocket;
 
 const apiSocketInit = (appListener) => {
-  apiSocket = new SocketIo('/api', appListener);
+  apiSocket = new Socket('/api', appListener);
   apiSocket.init();
   apiSocketRun();
 };

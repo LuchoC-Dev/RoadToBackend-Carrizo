@@ -1,6 +1,6 @@
 import { Server } from 'socket.io';
 
-class SocketIo {
+class Socket {
   constructor(path, httpServer) {
     this.path = path;
     this.httpServer = httpServer;
@@ -19,4 +19,4 @@ class SocketIo {
   }
 }
 
-export default SocketIo;
+export default Socket;

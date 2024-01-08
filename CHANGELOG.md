@@ -1,3 +1,10 @@
+## <small>0.1.1 (2024-01-06)</small>
+
+* 0.1.1 ([921a0a0](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/921a0a0))
+* docs: :memo: Remplace "changelog" to "log" in json scripts ([a6edb7e](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/a6edb7e))
+
+
+
 ## 0.1.0 (2024-01-06)
 
 * 0.1.0 ([6fa2eab](https://github.com/LuchoC-Dev/RoadToBackend-Carrizo/commit/6fa2eab))
